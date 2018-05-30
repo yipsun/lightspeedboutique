@@ -1,0 +1,26 @@
+.buffer{
+    text-align: center;
+    margin: 40px;
+    i{
+        color: #ccc;
+        display: block;
+        margin: 0 auto 30px;
+        font-size: 50px;
+        animation: rotate 10s linear infinite;
+    }
+}
+
+.buffer__text{
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

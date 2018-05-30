@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sunflower";
+}
+
+$xs : 576px;
+$sm : 768px;
+$md : 992px;
+$lg : 1200px;
+
+@import './components/cart.scss';
+@import './components/listing.scss';
+@import './components/detail.scss';
+@import './components/error.scss';
+@import './components/buffer.scss';

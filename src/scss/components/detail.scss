@@ -1,0 +1,108 @@
+.detail {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border-bottom: 1px #333 dashed;
+    position: relative;
+    
+    @media screen and (min-width:$xs){
+        padding: 20px 50px 20px 0;
+        width: 540px;
+    }
+    @media screen and (min-width:$sm){
+        width: 720px;
+    }
+    @media screen and (min-width:$md){
+        width: 960px;
+    }
+}
+
+.detail__close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #aaa;
+
+    &:hover {
+        color: tomato;
+    }
+}
+
+.detail__container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $xs) {
+        flex-direction: row;
+    }
+}
+
+.detail__itemImgWrap, .detail__itemInfoWrap {
+    flex: 0 0 100%;
+    padding: 0 10px;
+    
+    @media screen and (min-width: $xs) {
+        flex: 0 0 50%;
+    }
+}
+
+.detail__itemImgWrap{
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $xs) {
+        text-align: right;
+    }
+}
+.detail__itemInfo {
+    @media screen and (min-width: $xs) {
+        text-align: left;
+    }
+}
+
+.detail__itemImage {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+
+.detail__itemTitle {
+    font-weight: 100;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.detail__itemDesc {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.detail__itemInfo {
+    margin: 15px 0;
+    list-style-type: none;
+}
+
+.detail__itemButton {
+    color: #fff;
+    background: #444 ;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    i {
+        font-size: 14px;
+    }
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    @media screen and (min-width: $xs) {
+        font-size: 14px;
+    }
+}
