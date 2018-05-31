@@ -56,9 +56,9 @@ Developing application it's always best to think about your mvp functionalities 
 
 The boutique component has a function `updateCart` which takes as parameters `(itemId, quantity)`, for now when we call this function we always pass by default `1` as its quantity. Eventually we can add an input(num) in the `Detail` component to specify the quantity we want to add into our cart instead of the default value. The logic behind quantity parameter has already been implemented, the only thing left to do is integrate the DOM. 
 
-`Boutique`'s state has a `listingLimit` property which is passed as prop to `Listing`, with CTAs we can modify this value to allow more products to be shown, exemple at [Simons](https://www.simons.ca/en). With the eventuality to add sorting and filtering methods to the listing, this one could become a class component as it'll require state management. 
+`Boutique`'s state has a `listingLimit` property which is passed as prop to `Listing`, with CTAs we can modify this value to allow more products to be shown, example at [Simons](https://www.simons.ca/en). With the eventuality to add sorting and filtering methods to the listing, this one could become a class component as it'll require state management. 
 
-The cart property of the `Boutique`'s state only store the ID of the product as it's key and the quantity, this way there's no duplicate in our application and there's only one true data for a product. The success message to the checkout functionality list all the products bought and the quantity. The next step would actually be to have a cart management UI to remove items or update quantities. 
+The cart property of the `Boutique`'s state only store the ID of the product as it's key and the quantity, this way there's no duplicate in our application and there's only one true data for a product. The success message to the checkout functionality list all the products bought and the quantity. The next step would actually be to have a cart management UI to remove items and update quantities. 
 
 ## Contact
 
