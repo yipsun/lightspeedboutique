@@ -5,6 +5,7 @@ This project was developed for LightSpeed's technical test. This prototype was c
 - [Get the app up and running](#get-the-app-up-and-running)
 - [Tools](#tools)
 - [Thought process](#thought-process)
+- [Next Steps](#next-steps)
 
 ## Get the app up and running
 
@@ -28,10 +29,10 @@ In this case `App`, is basically the shell around the whole application, if the 
 
 The fetch API was used to make the initial request to the dummy API, but if it needed to be be supported on older browser, we would switch the call with XHR. Fetch was more convenient as it returns a Promise. 
 
-As we get our response, before storing data in our state to render the `Listing`, I've transform the array of products into an object. Instead of fetching a product by the array index, I've set the product's id as the key of the product inside of the new object. 
+As we get our response, before storing the data in our state to render the `Listing`, I've transform the array of products into an object. Instead of fetching a product by the array index, I've set the product's id as the key of the product inside of the new object. 
 
 ```Javascript
-var responseFromAPI = [ { title : "Nintendo Switch", id : "urururrkkkfii9393i" } ];
+var responseFromAPI = [ { title : "Nintendo Switch", id : "urururrkkkfii9393i" }, {}, {} ];
 var products = {
   urururrkkkfii9393i : {
     title : "Nintendo Switch",
@@ -39,3 +40,17 @@ var products = {
   }
 }
 ```
+
+The purpose of this application is to update your cart as well as the remaining quantity of products and calculating the total amount, that requires to manipulate and fetch the products. Looping through an array to find your desired product can become quite costly perfomance wise, in this case we have about 30 products but in a real online store such as Amazon you have billions of items. 
+
+Let's take calculating the total amount of your cart, if you have 4 items you would have to loop through your products 4 times before having the necessary data for your equation, while an object you can fetch directly your products just by storing you product ID. Manipulating items in an array can be risky as the index is not specific to an item, therefor if the index and/or length of the array starts to shift around, that index is not reliable.
+
+## Next steps
+
+Developing application it's always best to think about your mvp functionalities but also the potential growth of your component, so what's next ? 
+
+The boutique component has a function `updateCart` which takes as parameters `(itemId, quantity)`, for now when we call this function we always pass by default `1` as its quantity. Eventually we can add an input(num) in the `Detail` component to specify the quantity we want to add into our cart instead of the default value. The logic behind quantity parameter has already been implemented, the only thing left to do is integrate the DOM. 
+
+`Boutique`'s state has a `listingLimit` property which is passed as prop to `Listing`, with CTAs we can modify this value to allow more products to be shown, exemple at [Simons](https://www.simons.ca/en). With the eventuality to add sorting and filtering methods to the listing, this one could become a class component as it'll require state management. 
+
+The cart property of the `Boutique`'s state only store the ID of the product as it's key and the quantity, this way there's no duplicate in our application and there's only one true data for a product. The success message to the checkout functionality list all the products bought and the quantity. The next step would actually be to have a cart management UI to remove items or update quantities. 
