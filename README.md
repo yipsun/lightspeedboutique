@@ -4,6 +4,7 @@ This project was developed for LightSpeed's technical test. This prototype was c
 
 - [Get the app up and running](#get-the-app-up-and-running)
 - [Tools](#tools)
+- [UI behaviour cases](#ui-behaviour-cases)
 - [Thought process](#thought-process)
 - [Next Steps](#next-steps)
 - [Contact](#contact)
@@ -25,6 +26,14 @@ At this point, you'll be able to view the application with Create React App's st
 After reading the criteria of the test, I've decided to take the plunge with Create React App, since it provides all the necessary basic stack to create a protoype application. Easy to use, less stack configuration and more coding! I've added gulp to the package.json since Create React App's philosphy is to include all resources directly in the components, while I'm just more comfortable writing my stylesheets seperately : more explicit structure by importing scss file in a specific order, sharing variables and mixins, etc. I've used Font Awesome for my icons, since it's practical with its CDN and easy use.
 
 I've used BootStrap's breakpoint at they seem to fit the standards in the web industry.
+
+## UI behaviour cases
+
+* Adding all the remaining stock into your stock should disable the ADD TO CART button.
+* Checkout out with no item in your cart, should recommend you to shop.
+* Clicking on the image of a product in the listing should open the detail view.
+* In the code if you change the API prop of Boutique to make an error, the error view should appear.
+
 
 ## Thoughts and process
 
