@@ -6,6 +6,7 @@ This project was developed for LightSpeed's technical test. This prototype was c
 - [Tools](#tools)
 - [Thought process](#thought-process)
 - [Next Steps](#next-steps)
+- [Contact](#contact)
 
 ## Get the app up and running
 
@@ -54,3 +55,7 @@ The boutique component has a function `updateCart` which takes as parameters `(i
 `Boutique`'s state has a `listingLimit` property which is passed as prop to `Listing`, with CTAs we can modify this value to allow more products to be shown, exemple at [Simons](https://www.simons.ca/en). With the eventuality to add sorting and filtering methods to the listing, this one could become a class component as it'll require state management. 
 
 The cart property of the `Boutique`'s state only store the ID of the product as it's key and the quantity, this way there's no duplicate in our application and there's only one true data for a product. The success message to the checkout functionality list all the products bought and the quantity. The next step would actually be to have a cart management UI to remove items or update quantities. 
+
+## Contact
+
+If you have any questions, comments and/or constructive feedback on this technical test, please write me at [sonda.yip@gmai.com](mailto:sonda.yip@gmail.com)
