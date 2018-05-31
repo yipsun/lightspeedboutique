@@ -1,13 +1,14 @@
 .detail {
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    border-bottom: 1px #333 dashed;
     position: relative;
+
+    border-bottom: 1px #333 dashed;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
     
     @media screen and (min-width:$xs){
-        padding: 20px 50px 20px 0;
         width: 540px;
+        padding: 20px 50px;
     }
     @media screen and (min-width:$sm){
         width: 720px;
@@ -21,9 +22,12 @@
     position: absolute;
     top: 20px;
     right: 15px;
-    font-size: 25px;
-    cursor: pointer;
+
     color: #aaa;
+    
+    font-size: 25px;
+    
+    cursor: pointer;
 
     &:hover {
         color: tomato;
@@ -49,8 +53,10 @@
 }
 
 .detail__itemImgWrap{
-    text-align: center;
     margin-bottom: 20px;
+    
+    text-align: center;
+
     @media screen and (min-width: $xs) {
         text-align: right;
     }
@@ -69,10 +75,11 @@
 
 
 .detail__itemTitle {
+    margin-bottom: 10px;
+
     font-weight: 100;
     font-size: 16px;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
 
 .detail__itemDesc {
@@ -82,27 +89,31 @@
 
 .detail__itemInfo {
     margin: 15px 0;
+
     list-style-type: none;
 }
 
 .detail__itemButton {
+    border:none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    
     color: #fff;
     background: #444 ;
-    padding: 10px 20px;
-    border-radius: 20px;
+    
     font-size: 12px;
+    
     cursor: pointer;
     outline: none;
-    i {
-        font-size: 14px;
-    }
-
+    
     &:hover {
         background: #000;
-        color: #fff;
     }
 
-    @media screen and (min-width: $xs) {
-        font-size: 14px;
+    &[disabled] {
+        opacity: 0.2;
+        &:hover {
+            background: #444;
+        }
     }
 }

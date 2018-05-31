@@ -1,7 +1,20 @@
 .error{
+    margin: 40px;
 
+    text-align: center;
+
+    i{
+        display: block;
+        margin: 0 auto 30px;
+        
+        color: tomato;
+        
+        font-size: 50px;
+    }
 }
 
 .error__text{
-
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
 }

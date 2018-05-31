@@ -1,11 +1,13 @@
 .cart {
-    background: #222;
-    color: #ddd;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     padding: 10px;
+    
+    background: #222;
+    color: #ddd;
+
     @media screen and (min-width: $xs) {
         padding: 15px 20px;
     }
@@ -13,6 +15,7 @@
 
 .cart__quantity, .cart__total {
     margin-left: 15px;
+    
     font-size: 14px;
 
     i{
@@ -22,26 +25,32 @@
 
     @media screen and (min-width: $xs) {
         margin-left: 20px;
+        
         font-size: 16px;
     }
 }
 
 .cart__button {
-    color: #ddd;
-    background: transparent;
     border: 2px solid #ddd;
+    border-radius: 20px;
     margin-left: 20px;
     padding: 5px 10px;
-    border-radius: 20px;
+    
+    color: #ddd;
+    background: transparent;
+    
     font-size: 12px;
+    
     cursor: pointer;
+    
     i {
         font-size: 14px;
     }
 
     &:hover {
-        background: tomato;
         border-color: tomato;
+        
+        background: tomato;
     }
 
     @media screen and (min-width: $xs) {

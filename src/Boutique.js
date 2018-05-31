@@ -3,7 +3,6 @@ import Listing from './Listing';
 import Detail from './Detail';
 import Cart from './Cart';
 
-
 class Boutique extends Component {
 
     constructor(props) {
@@ -21,15 +20,13 @@ class Boutique extends Component {
 
         // set state after receiving response from API
         apiCall.then( (data) => {
-            // if(data) {
-                // parse initial data to make it more accessible array => object
-                let products = data.reduce( (r,v,i) => {
-                    r[v._id] = v;
-                    return r;
-                }, {});
-    
-                this.setState( (state,props) => { return {products}} );
-            // }
+            // parse initial data to make it more accessible array => object
+            let products = data.reduce( (r,v,i) => {
+                r[v._id] = v;
+                return r;
+            }, {});
+
+            this.setState( (state,props) => { return {products}} );
         }).catch( error => {
             this.setState({error: true});
         });

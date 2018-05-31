@@ -1,11 +1,16 @@
 .buffer{
-    text-align: center;
     margin: 40px;
+
+    text-align: center;
+
     i{
-        color: #ccc;
         display: block;
         margin: 0 auto 30px;
+        
+        color: #ccc;
+        
         font-size: 50px;
+        
         animation: rotate 10s linear infinite;
     }
 }

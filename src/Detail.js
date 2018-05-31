@@ -2,7 +2,9 @@ import React from 'react';
 import {getColor} from './dict/color';
 
 const Detail = ({product, updateCart, setSelectedItem}) => {
+    // destructuring product property into var for easier access
     let {title, description, color, image, stock, price} = product;
+
     return (
         <div className="detail">
             <span className="detail__close far fa-times-circle" onClick={ () => setSelectedItem(null) }></span>
