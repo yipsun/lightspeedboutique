@@ -24,6 +24,8 @@ At this point, you'll be able to view the application with Create React App's st
 
 After reading the criteria of the test, I've decided to take the plunge with Create React App, since it provides all the necessary basic stack to create a protoype application. Easy to use, less stack configuration and more coding! I've added gulp to the package.json since Create React App's philosphy is to include all resources directly in the components, while I'm just more comfortable writing my stylesheets seperately : more explicit structure by importing scss file in a specific order, sharing variables and mixins, etc. I've used Font Awesome for my icons, since it's practical with its CDN and easy use.
 
+I've used BootStrap's breakpoint at they seem to fit the standards in the web industry.
+
 ## Thoughts and process
 
 In this case `App`, is basically the shell around the whole application, if the app had more component such as header, footer, related articles, etc., they could have been added at this level just like `Boutique`. `Boutique` is a class component, since it needs its state property to dictate the views to be rendered and handling the events of sub components, such as updating the cart, selecting a product for the detailed view and checking out. My sub components `Detail`, `Listing` and `Cart` are functional classes/stateless component as they do not require state management within itself. Managing the events was quite simple by passing callbacks from the parent component to the child, by attaching events attribute on the JSX to call the callback function and passing the required parameters. 
