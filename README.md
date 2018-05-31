@@ -1,16 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This project was developed for LightSpeed's technical test. This prototype was created from [Create React App](https://github.com/facebookincubator/create-react-app) for effeciency. The front end stack that it comes with, fulfilled the needs for this project to be completed with gulp added to it. 
 
 ## Table of Contents
 
-- [Updating to New Releases](#updating-to-new-releases)
-  - [npm start](#npm-start)
+- [Get the app up and running](#get-the-app-up-and-running)
+  - [test](#test) 
   
-## Updating to New Releases
-
-Create React App is divided into two packages:
+## Get the app up and running
 
 * `create-react-app` is a global command-line utility that you use to create new projects.
 * `react-scripts` is a development dependency in the generated projects (includin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##test
