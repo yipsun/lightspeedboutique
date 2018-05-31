@@ -13,7 +13,7 @@ class Boutique extends Component {
             selectedItem: null,
             cart: {},
             error: false,
-            listingLimit: 5,
+            listingLimit: 30,
         };
         
         // init fetch call
