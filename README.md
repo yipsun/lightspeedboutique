@@ -35,12 +35,14 @@ The fetch API was used to make the initial request to the dummy API, but if it n
 As we get our response, before storing the data in our state to render the `Listing`, I've transform the array of products into an object. Instead of fetching a product by the array index, I've set the product's id as the key of the product inside of the new object. 
 
 ```Javascript
-var responseFromAPI = [ { title : "Nintendo Switch", id : "urururrkkkfii9393i" }, {}, {} ];
+var responseFromAPI = [ { title : "Nintendo Switch", id : "urururrkkkfii9393i" }, {...}, {...} ];
 var products = {
   urururrkkkfii9393i : {
     title : "Nintendo Switch",
     id : "urururrkkkfii9393i"
-  }
+  },
+  iiifkfkgkgkkgkgkgk : { ... },
+  fififiif9jl1l10l11 : { ... }
 }
 ```
 
@@ -60,4 +62,4 @@ The cart property of the `Boutique`'s state only store the ID of the product as 
 
 ## Contact
 
-If you have any questions, comments and/or constructive feedback on this technical test, please write me at [sonda.yip@gmai.com](mailto:sonda.yip@gmail.com)
+If you have any questions, comments and/or constructive feedback on this technical test, please write me at [sonda.yip@gmail.com](mailto:sonda.yip@gmail.com)
