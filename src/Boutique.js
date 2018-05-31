@@ -41,6 +41,11 @@ class Boutique extends Component {
     // update state method(s)
     setSelectedItem(item) {
         this.setState({selectedItem : item });
+        var scrollStep = -window.scrollY / (200 / 15),
+        scrollInterval = setInterval(() => {
+            window.scrollY !== 0 ? window.scrollBy( 0, scrollStep ) : clearInterval(scrollInterval); 
+        },15);
+
     }
 
     updateCart(itemId, quantity = 1) {
