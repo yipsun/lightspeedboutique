@@ -12,7 +12,8 @@ class Boutique extends Component {
         this.state = {
             selectedItem: null,
             cart: {},
-            error: false
+            error: false,
+            listingLimit: 5,
         };
         
         // init fetch call
@@ -42,7 +43,7 @@ class Boutique extends Component {
         this.setState({selectedItem : item });
     }
 
-    updateCart(itemId, quantity) {
+    updateCart(itemId, quantity = 1) {
         let item = this.state.products[itemId];
 
         // update products quantity and cart
@@ -105,7 +106,7 @@ class Boutique extends Component {
         return (
             <div>
                 { this.state.selectedItem && <Detail product={product} updateCart={this.updateCart} setSelectedItem={this.setSelectedItem} />}
-                <Listing products={this.state.products} selectedItem={this.setSelectedItem} updateCart={this.updateCart} />
+                <Listing limit={this.state.listingLimit} products={this.state.products} selectedItem={this.setSelectedItem} updateCart={this.updateCart} />
             </div>
         );
     }

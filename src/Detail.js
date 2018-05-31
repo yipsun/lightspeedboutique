@@ -20,7 +20,7 @@ const Detail = ({product, updateCart, setSelectedItem}) => {
                         <li><span>In-stock: </span>{stock.remaining}</li>
                         <li><span>Color: </span>{color}</li>
                     </ul>
-                    <button  className="detail__itemButton" type="button" onClick={ () => updateCart(product._id, 1) } disabled={ stock.remaining <= 0 } >ADD TO CART</button>
+                    <button  className="detail__itemButton" type="button" onClick={ () => updateCart(product._id) } disabled={ stock.remaining <= 0 } >ADD TO CART</button>
                 </div>
             </div>
         </div>
